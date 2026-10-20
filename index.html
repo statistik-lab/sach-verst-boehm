@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kfz-Sachverständiger in Crimmitschau und Umgebung. Kontaktieren Sie uns für eine persönliche Anfrage.">
+  <title>Kfz-Sachverständigenbüro Böhm | Crimmitschau</title>
+
+  <style>
+    :root {
+      --navy: #0b1930;
+      --navy-light: #142945;
+      --turquoise: #29d3c2;
+      --white: #ffffff;
+      --muted: #b9c7d8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--navy);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: var(--turquoise);
+    }
+
+    .header-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 90px 0 85px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #176b7960, transparent 40%),
+        linear-gradient(135deg, var(--navy), var(--navy-light));
+    }
+
+    .eyebrow {
+      color: var(--turquoise);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 18px 0;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    h1 span {
+      color: var(--turquoise);
+    }
+
+    .hero-text {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 23px;
+      border-radius: 8px;
+      background: var(--turquoise);
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .button-secondary {
+      border: 1px solid #ffffff50;
+      color: var(--white);
+      background: transparent;
+    }
+
+    .trust-strip {
+      background: #ffffff08;
+      border-top: 1px solid #ffffff15;
+      border-bottom: 1px solid #ffffff15;
+      padding: 24px 0;
+    }
+
+    .trust-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .trust-inner strong {
+      color: var(--white);
+    }
+
+    section.content-section {
+      padding: 75px 0;
+    }
+
+    .section-label {
+      color: var(--turquoise);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    .intro {
+      max-width: 680px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 25px;
+      background: #ffffff08;
+      border: 1px solid #ffffff18;
+      border-radius: 12px;
+    }
+
+    .card-number {
+      color: var(--turquoise);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .card h3 {
+      margin: 12px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .about {
+      background: #ffffff06;
+    }
+
+    .about-panel {
+      max-width: 800px;
+      padding: 32px;
+      border-left: 3px solid var(--turquoise);
+      background: #ffffff08;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .about-panel p {
+      color: var(--muted);
+    }
+
+    .contact-panel {
+      padding: 40px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #15344a, #10434a);
+      border: 1px solid #29d3c240;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid #ffffff20;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer a {
+      margin-left: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 65px 0;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section.content-section {
+        padding: 55px 0;
+      }
+
+      .contact-panel {
+        padding: 25px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .trust-inner {
+        flex-direction: column;
+      }
+
+      footer a {
+        margin: 0 12px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">SACHVERSTÄNDIGENBÜRO <span>BÖHM</span></div>
+      <div class="header-note">Crimmitschau · Sachsen</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Ihr Ansprechpartner rund um Fahrzeugschäden</div>
+        <h1>Kompetenz und Erfahrung bei <span>Fahrzeugschäden.</span></h1>
+        <p class="hero-text">
+          Persönliche Betreuung, fachkundige Begutachtung und über
+          25 Jahre Erfahrung als selbstständiger Sachverständiger –
+          aus Crimmitschau für die Region und darüber hinaus.
+        </p>
+        <div class="buttons">
+          <a class="button" href="#kontakt">Kontakt aufnehmen</a>
+          <a class="button button-secondary" href="#leistungen">Leistungen entdecken</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <div><strong>25+ Jahre</strong> selbstständige Erfahrung</div>
+        <div><strong>Crimmitschau</strong> und Umgebung</div>
+        <div><strong>Flexibel</strong> auch überregional im Einsatz</div>
+      </div>
+    </div>
+
+    <section class="content-section" id="leistungen">
+      <div class="container">
+        <div class="section-label">Leistungen</div>
+        <h2>Unterstützung bei Fahrzeugschäden</h2>
+        <p class="intro">
+          Welche Begutachtung benötigen Sie? Wir besprechen Ihr Anliegen
+          persönlich und klären gemeinsam die nächsten Schritte.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01 / FAHRZEUGE</div>
+            <h3>Kfz-Schadengutachten</h3>
+            <p>
+              Informationen zu den angebotenen Gutachtenarten werden
+              nach persönlicher Abstimmung ergänzt.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02 / NUTZFAHRZEUGE</div>
+            <h3>Lkw-Begutachtung</h3>
+            <p>
+              Fragen zur Begutachtung von Nutzfahrzeugen können
+              persönlich besprochen werden.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03 / BERATUNG</div>
+            <h3>Persönliche Anfrage</h3>
+            <p>
+              Schildern Sie den Schaden und wir klären, welche
+              Unterstützung im konkreten Fall möglich ist.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section about">
+      <div class="container">
+        <div class="section-label">Über das Büro</div>
+        <h2>Erfahrung, die Vertrauen schafft</h2>
+        <div class="about-panel">
+          <p>
+            Seit über 25 Jahren ist das Sachverständigenbüro Böhm
+            selbstständig im Bereich Verkehrsschäden tätig.
+            Die langjährige praktische Erfahrung bildet die Grundlage
+            für eine persönliche Betreuung.
+          </p>
+          <p>
+            Der Standort ist Crimmitschau in Sachsen. Einsätze in
+            Zwickau und Umgebung sowie nach Absprache auch darüber
+            hinaus sind vorgesehen.
+          </p>
+          <p>
+            Angaben zu Qualifikationen und offiziellen Bezeichnungen
+            werden ergänzt, sobald sie bestätigt sind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="kontakt">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="section-label">Kontakt</div>
+          <h2>Sie haben einen Fahrzeugschaden?</h2>
+          <p>
+            Nehmen Sie Kontakt auf. Wir besprechen Ihr Anliegen
+            persönlich und klären das weitere Vorgehen.
+          </p>
+          <div class="buttons">
+            <a class="button" href="mailto:KONTAKT-EMAIL-HIER">
+              E-Mail schreiben
+            </a>
+            <a class="button button-secondary" href="#kontakt">
+              Telefonnummer folgt
+            </a>
+          </div>
+          <p>
+            Hinweis: Kontaktdaten bitte vor der endgültigen
+            Veröffentlichung ergänzen.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© Sachverständigenbüro Böhm</div>
+      <div>
+        <a href="#kontakt">Kontakt</a>
+        <span>Impressum und Datenschutz folgen vor der endgültigen Veröffentlichung.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
