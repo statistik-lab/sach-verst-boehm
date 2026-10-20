@@ -3,116 +3,132 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kfz-Sachverständiger in Crimmitschau und Umgebung. Kontaktieren Sie uns für eine persönliche Anfrage.">
-  <title>Kfz-Sachverständigenbüro Böhm | Crimmitschau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kfz-Sachverständigenbüro Böhm in Crimmitschau. Persönliche Beratung bei Fahrzeugschäden.">
+  <title>Sachverständigenbüro Böhm | Crimmitschau</title>
 
   <style>
     :root {
       --navy: #0b1930;
-      --navy-light: #142945;
+      --navy2: #142945;
       --turquoise: #29d3c2;
       --white: #ffffff;
-      --muted: #b9c7d8;
+      --muted: #bdcad9;
+      --panel: #172b43;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--white);
       background: var(--navy);
-      line-height: 1.6;
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
     }
 
-    a {
-      color: inherit;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
     }
+
+    a { color: inherit; }
 
     .container {
-      width: min(1100px, 90%);
-      margin: 0 auto;
+      width: min(1120px, 90%);
+      margin: auto;
     }
 
     header {
-      padding: 22px 0;
+      padding: 20px 0;
       border-bottom: 1px solid #ffffff20;
     }
 
     .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .brand {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
+      font-weight: 800;
+      letter-spacing: .5px;
     }
 
-    .brand span {
+    .brand span, h1 span, .accent {
       color: var(--turquoise);
     }
 
-    .header-note {
+    .location {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
     .hero {
-      padding: 90px 0 85px;
-      background:
-        radial-gradient(ellipse at 90% 10%, #176b7960, transparent 40%),
-        linear-gradient(135deg, var(--navy), var(--navy-light));
+      padding: 65px 0 75px;
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 48px;
     }
 
     .eyebrow {
       color: var(--turquoise);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.8rem;
+      font-size: .78rem;
       font-weight: 700;
+      letter-spacing: 2px;
     }
 
     h1 {
-      max-width: 780px;
-      margin: 18px 0;
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
       line-height: 1.08;
       letter-spacing: -1.5px;
+      margin: 18px 0;
     }
 
-    h1 span {
-      color: var(--turquoise);
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    h3 { line-height: 1.3; }
+
+    .hero-text, .intro, .card p, .about-text, .contact-panel p {
+      color: var(--muted);
     }
 
     .hero-text {
-      max-width: 640px;
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin-bottom: 30px;
+      font-size: 1.1rem;
+      max-width: 570px;
+    }
+
+    .hero-image {
+      height: 410px;
+      border-radius: 16px;
+      border: 1px solid #ffffff30;
+      box-shadow: 0 25px 60px #0005;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-top: 30px;
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .button {
       display: inline-block;
-      padding: 15px 23px;
+      padding: 14px 22px;
       border-radius: 8px;
       background: var(--turquoise);
       color: var(--navy);
@@ -122,116 +138,117 @@
     }
 
     .button-secondary {
-      border: 1px solid #ffffff50;
-      color: var(--white);
       background: transparent;
+      color: white;
+      border: 1px solid #ffffff60;
     }
 
-    .trust-strip {
+    .trust {
       background: #ffffff08;
-      border-top: 1px solid #ffffff15;
-      border-bottom: 1px solid #ffffff15;
-      padding: 24px 0;
+      border-block: 1px solid #ffffff18;
+      padding: 22px 0;
     }
 
     .trust-inner {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 16px;
+      flex-wrap: wrap;
+      gap: 15px;
       color: var(--muted);
-      font-size: 0.95rem;
     }
 
-    .trust-inner strong {
-      color: var(--white);
-    }
+    .trust strong { color: white; }
 
-    section.content-section {
-      padding: 75px 0;
+    .section {
+      padding: 78px 0;
     }
 
     .section-label {
       color: var(--turquoise);
-      font-size: 0.8rem;
       font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
     }
 
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-      line-height: 1.2;
-      margin: 12px 0 18px;
-    }
-
-    .intro {
-      max-width: 680px;
-      color: var(--muted);
-    }
+    .intro { max-width: 690px; }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 22px;
       margin-top: 35px;
     }
 
     .card {
-      padding: 25px;
+      overflow: hidden;
+      border: 1px solid #ffffff1c;
+      border-radius: 13px;
       background: #ffffff08;
-      border: 1px solid #ffffff18;
-      border-radius: 12px;
     }
+
+    .card img {
+      height: 220px;
+    }
+
+    .card-body { padding: 22px; }
 
     .card-number {
       color: var(--turquoise);
-      font-size: 0.85rem;
+      font-size: .78rem;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    .card h3 {
-      margin: 12px 0 8px;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      margin-bottom: 0;
-    }
+    .card h3 { margin: 9px 0; }
 
     .about {
       background: #ffffff06;
     }
 
-    .about-panel {
-      max-width: 800px;
-      padding: 32px;
-      border-left: 3px solid var(--turquoise);
+    .about-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 42px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .portrait-wrap { text-align: center; }
+
+    .portrait {
+      width: 100%;
+      height: 340px;
+      border-radius: 14px;
+      background: var(--panel);
+      border: 1px solid #ffffff25;
+    }
+
+    .placeholder-note {
+      color: var(--muted);
+      font-size: .8rem;
+      margin-top: 9px;
+    }
+
+    .about-text {
+      padding: 28px;
       background: #ffffff08;
+      border-left: 3px solid var(--turquoise);
       border-radius: 0 12px 12px 0;
     }
 
-    .about-panel p {
-      color: var(--muted);
-    }
-
     .contact-panel {
-      padding: 40px;
+      padding: 42px;
+      border: 1px solid #29d3c240;
       border-radius: 16px;
       background: linear-gradient(135deg, #15344a, #10434a);
-      border: 1px solid #29d3c240;
-    }
-
-    .contact-panel p {
-      color: var(--muted);
     }
 
     footer {
       padding: 28px 0;
       border-top: 1px solid #ffffff20;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: .85rem;
     }
 
     .footer-inner {
@@ -241,14 +258,25 @@
       gap: 12px;
     }
 
-    footer a {
-      margin-left: 16px;
-    }
-
-    @media (max-width: 700px) {
-      .hero {
-        padding: 65px 0;
+    @media (max-width: 760px) {
+      .hero-grid, .about-grid {
+        grid-template-columns: 1fr;
       }
+
+      .hero { padding: 48px 0; }
+
+      .hero-image { height: 270px; }
+
+      .cards { grid-template-columns: 1fr; }
+
+      .card img { height: 240px; }
+
+      .portrait {
+        width: min(100%, 300px);
+        margin: auto;
+      }
+
+      .section { padding: 55px 0; }
 
       .header-inner {
         align-items: flex-start;
@@ -256,29 +284,11 @@
         gap: 5px;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+      .buttons { flex-direction: column; }
 
-      section.content-section {
-        padding: 55px 0;
-      }
+      .button { width: 100%; }
 
-      .contact-panel {
-        padding: 25px;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .trust-inner {
-        flex-direction: column;
-      }
-
-      footer a {
-        margin: 0 12px 0 0;
-      }
+      .contact-panel { padding: 25px; }
     }
   </style>
 </head>
@@ -287,119 +297,160 @@
   <header>
     <div class="container header-inner">
       <div class="brand">SACHVERSTÄNDIGENBÜRO <span>BÖHM</span></div>
-      <div class="header-note">Crimmitschau · Sachsen</div>
+      <div class="location">Crimmitschau · Sachsen</div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <div class="eyebrow">Ihr Ansprechpartner rund um Fahrzeugschäden</div>
-        <h1>Kompetenz und Erfahrung bei <span>Fahrzeugschäden.</span></h1>
-        <p class="hero-text">
-          Persönliche Betreuung, fachkundige Begutachtung und über
-          25 Jahre Erfahrung als selbstständiger Sachverständiger –
-          aus Crimmitschau für die Region und darüber hinaus.
-        </p>
-        <div class="buttons">
-          <a class="button" href="#kontakt">Kontakt aufnehmen</a>
-          <a class="button button-secondary" href="#leistungen">Leistungen entdecken</a>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Ihr Ansprechpartner bei Fahrzeugschäden</div>
+          <h1>Erfahrung, die bei <span>Schäden zählt.</span></h1>
+          <p class="hero-text">
+            Seit über 25 Jahren selbstständig im Bereich Verkehrsschäden tätig.
+            Persönliche Betreuung aus Crimmitschau – in der Region und nach
+            Absprache auch überregional.
+          </p>
+          <div class="buttons">
+            <a class="button" href="#kontakt">Kontakt aufnehmen</a>
+            <a class="button button-secondary" href="#leistungen">Leistungen ansehen</a>
+          </div>
         </div>
+
+        <img
+          class="hero-image"
+          src="https://images.pexels.com/photos/8985697/pexels-photo-8985697.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Beispielbild: Fachkraft untersucht ein Fahrzeug in einer Werkstatt"
+          onerror="this.style.display='none'">
       </div>
     </section>
 
-    <div class="trust-strip">
+    <div class="trust">
       <div class="container trust-inner">
         <div><strong>25+ Jahre</strong> selbstständige Erfahrung</div>
         <div><strong>Crimmitschau</strong> und Umgebung</div>
-        <div><strong>Flexibel</strong> auch überregional im Einsatz</div>
+        <div><strong>Flexibel</strong> überregional nach Absprache</div>
       </div>
     </div>
 
-    <section class="content-section" id="leistungen">
+    <section class="section" id="leistungen">
       <div class="container">
         <div class="section-label">Leistungen</div>
-        <h2>Unterstützung bei Fahrzeugschäden</h2>
+        <h2>Begutachtung mit Sachverstand</h2>
         <p class="intro">
-          Welche Begutachtung benötigen Sie? Wir besprechen Ihr Anliegen
-          persönlich und klären gemeinsam die nächsten Schritte.
+          Die folgenden Bereiche sind Gestaltungsvorschläge. Die tatsächlich
+          angebotenen Leistungen werden vor der Veröffentlichung bestätigt.
         </p>
 
         <div class="cards">
           <article class="card">
-            <div class="card-number">01 / FAHRZEUGE</div>
-            <h3>Kfz-Schadengutachten</h3>
-            <p>
-              Informationen zu den angebotenen Gutachtenarten werden
-              nach persönlicher Abstimmung ergänzt.
-            </p>
+            <img
+              src="https://images.pexels.com/photos/8985697/pexels-photo-8985697.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Platzhalterbild zur Fahrzeugprüfung"
+              loading="lazy"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <div class="card-number">01 / PKW</div>
+              <h3>Kfz-Schadengutachten</h3>
+              <p>
+                Informationen zu den konkreten Gutachtenarten werden nach
+                Abstimmung mit dem Sachverständigen ergänzt.
+              </p>
+            </div>
           </article>
 
           <article class="card">
-            <div class="card-number">02 / NUTZFAHRZEUGE</div>
-            <h3>Lkw-Begutachtung</h3>
-            <p>
-              Fragen zur Begutachtung von Nutzfahrzeugen können
-              persönlich besprochen werden.
-            </p>
+            <img
+              src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Beispielbild aus einer Fahrzeugwerkstatt"
+              loading="lazy"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <div class="card-number">02 / PRÜFUNG</div>
+              <h3>Fahrzeugbegutachtung</h3>
+              <p>
+                Der genaue Umfang der Begutachtung wird individuell besprochen
+                und anhand der tatsächlichen Leistungen beschrieben.
+              </p>
+            </div>
           </article>
 
           <article class="card">
-            <div class="card-number">03 / BERATUNG</div>
-            <h3>Persönliche Anfrage</h3>
-            <p>
-              Schildern Sie den Schaden und wir klären, welche
-              Unterstützung im konkreten Fall möglich ist.
-            </p>
+            <img
+              src="https://images.pexels.com/photos/ truck-placeholder.jpg"
+              alt="Platzhalter für ein Bild zur Lkw-Begutachtung"
+              loading="lazy"
+              onerror="this.style.display='none'">
+            <div class="card-body">
+              <div class="card-number">03 / NUTZFAHRZEUGE</div>
+              <h3>Lkw-Begutachtung</h3>
+              <p>
+                Anfragen zu Nutzfahrzeugen und möglichen überregionalen
+                Einsätzen können persönlich besprochen werden.
+              </p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="content-section about">
+    <section class="section about">
       <div class="container">
-        <div class="section-label">Über das Büro</div>
-        <h2>Erfahrung, die Vertrauen schafft</h2>
-        <div class="about-panel">
-          <p>
-            Seit über 25 Jahren ist das Sachverständigenbüro Böhm
-            selbstständig im Bereich Verkehrsschäden tätig.
-            Die langjährige praktische Erfahrung bildet die Grundlage
-            für eine persönliche Betreuung.
-          </p>
-          <p>
-            Der Standort ist Crimmitschau in Sachsen. Einsätze in
-            Zwickau und Umgebung sowie nach Absprache auch darüber
-            hinaus sind vorgesehen.
-          </p>
-          <p>
-            Angaben zu Qualifikationen und offiziellen Bezeichnungen
-            werden ergänzt, sobald sie bestätigt sind.
-          </p>
+        <div class="section-label">Persönlich für Sie da</div>
+        <h2>Ein Ansprechpartner mit Erfahrung</h2>
+
+        <div class="about-grid">
+          <div class="portrait-wrap">
+            <img
+              class="portrait"
+              src="https://images.pexels.com/photos/8985697/pexels-photo-8985697.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Vorläufiges Platzhalterbild – noch kein echtes Porträt"
+              loading="lazy"
+              onerror="this.style.display='none'">
+            <div class="placeholder-note">
+              Platzhalter für ein echtes Porträt von Herrn Böhm
+            </div>
+          </div>
+
+          <div class="about-text">
+            <h3>Langjährige praktische Erfahrung</h3>
+            <p>
+              Das Sachverständigenbüro Böhm ist seit über 25 Jahren
+              selbstständig im Bereich Verkehrsschäden tätig.
+            </p>
+            <p>
+              Von Crimmitschau aus sind Einsätze in Zwickau und Umgebung
+              sowie nach vorheriger Absprache auch überregional vorgesehen.
+            </p>
+            <p>
+              Die offizielle Berufsbezeichnung, Qualifikationen und weitere
+              Leistungen werden ergänzt, sobald sie geprüft und bestätigt sind.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="content-section" id="kontakt">
+    <section class="section" id="kontakt">
       <div class="container">
         <div class="contact-panel">
           <div class="section-label">Kontakt</div>
-          <h2>Sie haben einen Fahrzeugschaden?</h2>
+          <h2>Sie haben Fragen zu einem Fahrzeugschaden?</h2>
           <p>
-            Nehmen Sie Kontakt auf. Wir besprechen Ihr Anliegen
-            persönlich und klären das weitere Vorgehen.
+            Nehmen Sie Kontakt auf. Wir besprechen Ihr Anliegen persönlich
+            und klären, welche Unterstützung möglich ist.
           </p>
           <div class="buttons">
-            <a class="button" href="mailto:KONTAKT-EMAIL-HIER">
+            <a class="button" href="mailto:EMAIL-ADRESSE-HIER">
               E-Mail schreiben
             </a>
             <a class="button button-secondary" href="#kontakt">
-              Telefonnummer folgt
+              Telefonnummer ergänzen
             </a>
           </div>
           <p>
-            Hinweis: Kontaktdaten bitte vor der endgültigen
-            Veröffentlichung ergänzen.
+            Vorläufige Präsentationsversion: Kontaktdaten bitte noch ergänzen.
           </p>
         </div>
       </div>
@@ -409,10 +460,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© Sachverständigenbüro Böhm</div>
-      <div>
-        <a href="#kontakt">Kontakt</a>
-        <span>Impressum und Datenschutz folgen vor der endgültigen Veröffentlichung.</span>
-      </div>
+      <div>Impressum und Datenschutz vor endgültiger Veröffentlichung ergänzen.</div>
     </div>
   </footer>
 </body>
